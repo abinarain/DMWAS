@@ -24,5 +24,11 @@ Dependencies: T-Coffee, External Data for DIPS such as that below:\
 Note: The DIPs column should be at regular interval of either step 1 or 2 or 3 or so on. Typically step 2 
  is expected given that the 1st column is that of SNPs and the other of DIPs.\
 Execution: python3 +ProgramFilename+ +InputData+ +OutputFastaDipFileName+ +DivergenceScoreFilename+ +steps in inputFile to look for DIVs+ \
-Example$ python3 multiColDIPsDiv.py multiColumnSplitSample.csv multiFastaDIPs DivergenceScoreFile 2\
+Example$ python3 multiColDIPsDiv.py multiColumnSplitSample.csv DIPsCol divergence 2\ 
 ##########################################################################################\
+Then the scores are taken from the reverse or bottom section of the divergence files created.\
+#USAGE $ python3 programname fileWithDivergenceScore fileNametoStoreSCoreAverageScore fileToRetrieveColumnNumber jumpingIndexCountSteps\
+#Example: $ python3 reverseReadMulti.py divergence reverse multiColumnSplitSample.csv 2\
+**Note : Only files with no blank content in terms of corresponding DIPs value for the column will be generated with their scores.\
+###########################################################################################\
+
