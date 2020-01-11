@@ -7,5 +7,5 @@ Univariate methods for association of the genomic variations with the end-or-end
 $>python3 genSampleData.py <no. of genotypes columns> <no. of individuals or rows> <frequency of one of how many> <max limit size of insertions> <outputFileName>\
 Example:\
 -bash-4.2$ python3 genSampleData.py 40 50 28 11 simulatedSNPLowDIPs.txt\
-##############################################################################################<br \>
+###########################################################################################\
 
