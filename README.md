@@ -36,8 +36,5 @@ Note : Only files with no blank content in terms of corresponding DIPs value for
 The multiple files which comprises of the scores are then used to replace the DIPs in MultiColFile resulting in MultiColDIPsScore file
 #Usage$ python3 ReplaceMultiColDIPs.py MultiColFile StepsWhereMultiColsAre ReverseScoreFileName \
 #Example: python3 ReplaceMultiColDIPs.py multiColumnSplitSample.csv 2 reverse \
-If the outputFile name needed is that of the inputFile name itself appended with 'Scored' word, and the input should be read from directory ./readwrite and the Output to send to ./readwrite2 , then use ReplaceMultiColDIPsNew.py for it. Example:
-#python3 ReplaceMultiColDIPsNew.py splitDIPs.403 2 reverseDivs.403.\
-The above command line will read data from file file reverseDivs.403. followed by as many columns as in splitDIPs.403 and will result in output file splitDIPs.403.Scored.txt\
 ###########################################################################################\
 
