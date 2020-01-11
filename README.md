@@ -36,5 +36,7 @@ Note : Only files with no blank content in terms of corresponding DIPs value for
 The multiple files which comprises of the scores are then used to replace the DIPs in MultiColFile resulting in MultiColDIPsScore file
 #Usage$ python3 ReplaceMultiColDIPs.py MultiColFile StepsWhereMultiColsAre ReverseScoreFileName \
 #Example: python3 ReplaceMultiColDIPs.py multiColumnSplitSample.csv 2 reverse \
+
+This creates file with DIPs replaced with Divergence score with the name MultiColDIPsScored.txt\
 ###########################################################################################\
 
