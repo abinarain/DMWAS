@@ -3,7 +3,7 @@ Machine &amp; Deep Learning Wide Association Study
 
 Univariate methods for association of the genomic variations with the end-or-endo-phenotype has been widely used by means of software tools such as snptest and p-link. In addition to encoding the SNPs, we introduce a novel method to encode the structural variations in genome such as the deletions and insertions polymorphism (DIPs) that can then be used downstream by artificial intelligence methods as an independent feature variable value to predict the endo-or-end phenotype. We conducted a complete all genomic variants association with the phenotype using deep learning and other machine learning techniques such as logistic regression, naïve bayes, gradient boosting, bagging, and adaboost. As a combination of the encoding scheme on a simulated DNA variation dataset, we were able to get near 100% accuracy using deep learning, while up to 82% accuracy in prediction was achieved using other machine learning algorithms. Deep learning script, however, took much more time and computational resources to determine the optimum parameters. We also make the source-codes available as a suit of software under the name MDLWAS.  Given that simulated data are not real cases as they have random component, MDLWAS is positioned to perform better even for algorithms other than deep learning for real case genomic data. 
 
-IMPORTANT: Please create a directory by name 'readwrite' without the quotes. This is where the intermediate files will be stored. 
+IMPORTANT: Please create directories by name 'readwrite', 'readwrite2' without the quotes. This is where the intermediate files will be stored. 
 ###################Generate Sample Genotype with DIPs#########################################\
 $>python3 genSampleData.py <no. of genotypes columns> <no. of individuals or rows> <frequency of one of how many> <max limit size of insertions> <outputFileName>\
 Example:\
@@ -17,7 +17,7 @@ For small size of the file use the serial version like below:\
   
 Do not attempt to use this script for large files, as the process can get hung for several weeks or months without producing results.\
 ########################################################################################\
-IMPORTANT: Please create a directory by name 'readwrite' without the quotes. This is where the intermediate files will be stored. 
+IMPORTANT: Please create directories by name 'readwrite','readwrite2' without the quotes. This is where the intermediate files will be stored. 
 Then for splitting multiple columns DIPs Divergence score use multiColDIPsDiv.py\
 This file extracts the DIPs from each column and puts them as a multi-fasta file. Then it calls T_coffee internally and outputs the divergence score to a divergence score file.\
 Dependencies: T-Coffee, External Data for DIPS such as that below:\
@@ -36,5 +36,8 @@ Note : Only files with no blank content in terms of corresponding DIPs value for
 The multiple files which comprises of the scores are then used to replace the DIPs in MultiColFile resulting in MultiColDIPsScore file
 #Usage$ python3 ReplaceMultiColDIPs.py MultiColFile StepsWhereMultiColsAre ReverseScoreFileName \
 #Example: python3 ReplaceMultiColDIPs.py multiColumnSplitSample.csv 2 reverse \
+If the outputFile name needed is that of the inputFile name itself appended with 'Scored' word, and the input should be read from directory ./readwrite and the Output to send to ./readwrite2 , then use ReplaceMultiColDIPsNew.py for it. Example:
+#python3 ReplaceMultiColDIPsNew.py splitDIPs.403 2 reverseDivs.403.\
+The above command line will read data from file file reverseDivs.403. followed by as many columns as in splitDIPs.403 and will result in output file splitDIPs.403.Scored.txt\
 ###########################################################################################\
 
