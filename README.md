@@ -23,6 +23,6 @@ Dependencies: T-Coffee, External Data for DIPS such as that below:\
 1 I AATTGGC\
 Note: The DIPs column should be at regular interval of either step 1 or 2 or 3 or so on. Typically step 2 
  is expected given that the 1st column is that of SNPs and the other of DIPs.\
-Execution: python3 <ProgramFilename> <InputData> <OutputFastaDipFileName> <DivergenceScoreFilename> <steps in inputFile to look for DIVs>\
+Execution: python3 +ProgramFilename+ +InputData+ +OutputFastaDipFileName+ +DivergenceScoreFilename+ +steps in inputFile to look for DIVs+ \
 Example$ python3 multiColDIPsDiv.py multiColumnSplitSample.csv multiFastaDIPs DivergenceScoreFile 2\
 ##########################################################################################\
