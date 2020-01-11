@@ -16,3 +16,13 @@ For small size of the file use the serial version like below:\
   
 Do not attempt to use this script for large files, as the process can get hung for several weeks or months without producing results.\
 ########################################################################################\
+Then for splitting multiple columns DIPs Divergence score use multiColDIPsDiv.py\
+This file extracts the DIPs from each column and puts them as a multi-fasta file. Then it calls T_coffee internally and outputs the divergence score to a divergence score file.\
+Dependencies: T-Coffee, External Data for DIPS such as that below:\
+0 T 0.0\
+1 I AATTGGC\
+Note: The DIPs column should be at regular interval of either step 1 or 2 or 3 or so on. Typically step 2 
+ is expected given that the 1st column is that of SNPs and the other of DIPs.\
+Execution: python3 <ProgramFilename> <InputData> <OutputFastaDipFileName> <DivergenceScoreFilename> <steps in inputFile to look for DIVs>\
+Example$ python3 multiColDIPsDiv.py multiColumnSplitSample.csv multiFastaDIPs DivergenceScoreFile 2\
+##########################################################################################\
