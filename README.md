@@ -8,4 +8,11 @@ $>python3 genSampleData.py <no. of genotypes columns> <no. of individuals or row
 Example:\
 -bash-4.2$ python3 genSampleData.py 40 50 28 11 simulatedSNPLowDIPs.txt\
 #######################################################################################\
+Then you would split the genotype information into multiple columns of SNPs and DIPs by command below:\
 
+For small size of the file use the serial version like below:\
+#Usage$ python3 splitMultiColDIPs.py <inputFileName> <outputFileNameDesired>\
+#Example$ python3 splitMultiColDIPs.py multiColumnSample.csv multiColumnSplitSample.csv\
+  
+Do not attempt to use this script for large files, as the process can get hung for several weeks or months without producing results.\
+########################################################################################\
