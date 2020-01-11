@@ -39,4 +39,10 @@ The multiple files which comprises of the scores are then used to replace the DI
 
 This creates file with DIPs replaced with Divergence score with the name MultiColDIPsScored.txt\
 ###########################################################################################\
+After encoding the DIPS, or even before encoding the DIPs, once we have the SNPs and DIPs columns splitted, we can encode the SNPs. It will be best encode for the SNPs columns after the DIPs columns are encoded, using the scripts and flow above.\
+
+Description: This script takes a Tab separated file where the 1st column is a SNP column value and iterates in gaps of 2, the file is then encoded  for each of the SNP values to get encoded. The column variable name label is added to the top appropriately by the column number underscore and the  SNP value or the value that there exists in the SNP row. Note that the separator can be changed to comma by just editing sep value.\
+ Usage: python3 programName inputFileName outputFileName\
+ Example: python3 encodeSNPs.py MultiColDIPsScored.txt MultiColDIPsScoredEncoded.txt\
+ #############################################################################################\
 
