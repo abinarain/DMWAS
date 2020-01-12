@@ -44,5 +44,9 @@ After encoding the DIPS, or even before encoding the DIPs, once we have the SNPs
 Description: This script takes a Tab separated file where the 1st column is a SNP column value and iterates in gaps of 2, the file is then encoded  for each of the SNP values to get encoded. The column variable name label is added to the top appropriately by the column number underscore and the  SNP value or the value that there exists in the SNP row. Note that the separator can be changed to comma by just editing sep value.\
  Usage: python3 programName inputFileName outputFileName\
  Example: python3 encodeSNPs.py MultiColDIPsScored.txt MultiColDIPsScoredEncoded.txt\
- #############################################################################################\
+##############################################################################################\
+ExhaustiveDNN\
+ 
+This script runs on anaconda jupyter, however, user may well extract the code and run it on shell prompt. Jupyter notebook 5.7.8 was used to test the script. This script would need you to create a directory by name model where the best score and the model corresponding to the best score will be saved. The input file for this script is MultiColDIPsScoredEncoded.txt which is the encoded file for genotype, and the Phenotype.txt file which contains the dependent y-values.\
+#################################################################################################\
 
