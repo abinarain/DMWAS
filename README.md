@@ -49,4 +49,21 @@ ExhaustiveDNN\
  
 This script runs on anaconda jupyter, however, user may well extract the code and run it on shell prompt. Jupyter notebook 5.7.8 was used to test the script. This script would need you to create a directory by name model where the best score and the model corresponding to the best score will be saved. The input file for this script is MultiColDIPsScoredEncoded.txt which is the encoded file for genotype, and the Phenotype.txt file which contains the dependent y-values.\
 #################################################################################################\
+Machine Learning Scripts createLogitReg.py, createAdaBoost.py, createBagging.py, createGradientBoosting.py, createNaiveBayes.py\
+
+Description: These script creates machine learning models of encoded Variant file having SNPs and/or DIPs\
+#It also prints the AUC curve and CrossTab values to check for precision, false positive, true negative, etc.\ 
+#It also generates a file PDValues.csv that has partial dependence of each column sorted in ascending order.\
+#Usage: python3 programName EncodedFileName.txt PhenotypeFile ColumnNumberwithYvals-1 #Example 5 for 6th column\
+#Example: python3 createLogitReg.py NullMafMultiColDIPsScoredEncoded.txt test.fam 5 \
+#Note: It would be useful to take the input encoded file which has been already filtered with MAF and Null values and any other discrepancy if any
+#Note: the Phenotype file is space delimited and does not have header file name, The EncodedFileName is comma delimited and the header names are the 
+#Note: The phenotype column variable should be of 2 values in nature, such as 1 unaffected and 2 affected, 
+#and any missing phenotype should be put -9. This is as per PLINK .FAM file input format for phenotype
+#column number_ character
+Dependencies: python3.7.3, itertools, matplotlib needs to be installed. 
+#####################################################################################################\
+
+
+
 
