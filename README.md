@@ -48,6 +48,8 @@ Description: This script takes a Tab separated file where the 1st column is a SN
 ExhaustiveDNN\
  
 This script runs on anaconda jupyter, however, user may well extract the code and run it on shell prompt. Jupyter notebook 5.7.8 was used to test the script. This script would need you to create a directory by name model where the best score and the model corresponding to the best score will be saved. The input file for this script is MultiColDIPsScoredEncoded.txt which is the encoded file for genotype, and the Phenotype.txt file which contains the dependent y-values.\
+
+Alternatively, ExhaustiveDNN.py can be used on Linux prompt. Dependency of tensorflow and keras should be installed.
 #################################################################################################\
 Machine Learning Scripts createLogitReg.py, createAdaBoost.py, createBagging.py, createGradientBoosting.py, createNaiveBayes.py\
 
